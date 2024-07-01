@@ -1,0 +1,41 @@
+.list {
+    display: flex; /* Utilise Flexbox pour centrer les éléments enfants */
+    flex-direction: column; /* Dispose les éléments enfants en colonne */
+    align-items: center; /* Centre les éléments horizontalement */
+}
+
+.list-item-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-align: left;
+    width: 60%;
+    background-color: white;
+    width: 60%; /* Ajustez la largeur comme souhaité */
+    margin-top: 10px;
+    margin-bottom: 10px; /* Espace entre les éléments */
+    border-radius: 10px; /* Applique le rayon de bordure souhaité */
+    overflow: hidden; /* Cache le débordement pour préserver les coins arrondis */
+  }
+  
+  .list-item-button img {
+    vertical-align: middle;
+
+  }
+  
+  .list-item-button .contenu {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+.contenu {
+    text-align: left; /* Aligne le texte à gauche */
+    /* Ajoutez d'autres propriétés si nécessaire, par exemple: */
+    margin-left: 10px; /* Réinitialiser les marges si nécessaire */
+  }
+
+.item-image{
+    width: 10%;
+    padding: 1%;
+}

@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import '../QRCode/QrCode.css';
 
 const QrCode = () => {
     const [urlServeur, setUrlServeur] = useState('');
-  
+    const navigate = useNavigate();
+
     const handleUrlServeurChange = (event) => {
       setUrlServeur(event.target.value);
     };
@@ -20,6 +22,7 @@ const QrCode = () => {
       axios.get(urlServeur+"/helloworld", {headers})
         .then(response => {
           console.log('Réponse du serveur:', response.data.contenu);
+          navigate('/home');
         })
         .catch(error => {
           console.error('Erreur lors de la requête:', error.response.data.contenu);
